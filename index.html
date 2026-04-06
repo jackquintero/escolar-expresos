@@ -5,7 +5,7 @@
 
     <!-- SEO PRINCIPAL -->
     <title>
-      Transporte Escolar y Expresos en Bogotá, Soacha, Cundinamarca | Servicio
+      Transporte Escolar y Expresos en dentro y fuera de Bogotá, Soacha, Cundinamarca | Servicio
       Seguro
     </title>
 
@@ -13,7 +13,7 @@
 
     <meta
       name="description"
-      content="Servicio de transporte escolar y expresos en Bogotá, Soacha, Cundinamarca . Viajes seguros, puntuales y confiables para estudiantes y grupos. Contáctanos por WhatsApp."
+      content="Servicio de transporte escolar y expresos dentro y fuera de Bogotá, Soacha, Cundinamarca . Viajes seguros, puntuales y confiables para estudiantes y grupos. Contáctanos por WhatsApp."
     />
 
     <meta
@@ -34,223 +34,604 @@
     />
     <meta property="og:type" content="website" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f4f4;
+      :root {
+        --color-bg: #f1f5f9;
+        --color-surface: #ffffff;
+        --color-text: #0f172a;
+        --color-muted: #64748b;
+        --color-brand: #0c4a6e;
+        --color-brand-light: #0369a1;
+        --color-accent: #059669;
+        --color-accent-hover: #047857;
+        --color-whatsapp: #25d366;
+        --color-whatsapp-hover: #1ebe5d;
+        --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+        --shadow-md: 0 12px 40px rgba(15, 23, 42, 0.08);
+        --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.12);
+        --radius: 14px;
+        --radius-lg: 20px;
+        --max: 1120px;
+        --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
       }
 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font);
+        margin: 0;
+        background: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.6;
+        font-size: 1.05rem;
+      }
+
+      .wrap {
+        width: min(100% - 2.5rem, var(--max));
+        margin-inline: auto;
+      }
+
+      /* Hero */
       header {
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("assets/img/img1.jpg") center/cover;
-        color: white;
-        padding: 100px 20px;
+        position: relative;
+        min-height: min(78vh, 640px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        padding: clamp(4rem, 12vw, 7rem) 1.25rem;
+        color: #fff;
+        background:
+          linear-gradient(165deg, rgba(12, 74, 110, 0.88) 0%, rgba(15, 23, 42, 0.82) 100%),
+          url("assets/img/img1.jpeg") center / cover no-repeat;
+      }
+
+      header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(5, 150, 105, 0.15), transparent 55%);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 44rem;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.92);
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        padding: 0.45rem 1rem;
+        border-radius: 999px;
+        margin-bottom: 1.25rem;
       }
 
       h1 {
         margin: 0;
-        font-size: 40px;
+        font-size: clamp(1.75rem, 4.5vw, 2.65rem);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
       }
 
-      header p {
-        font-size: 18px;
-        margin-top: 10px;
+      .hero-lead {
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        margin: 1.15rem 0 0;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 36rem;
+        margin-inline: auto;
+      }
+
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        justify-content: center;
+        margin-top: 2rem;
       }
 
       .btn {
-        background: #25d366;
+        background: var(--color-whatsapp);
         color: white;
-        padding: 15px 30px;
+        padding: 0.95rem 1.75rem;
         text-decoration: none;
-        border-radius: 8px;
-        display: inline-block;
-        margin-top: 25px;
-        font-size: 18px;
-        transition: 0.3s;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
       }
 
       .btn:hover {
-        background: #1ebe5d;
-        transform: scale(1.05);
+        background: var(--color-whatsapp-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
       }
 
+      .btn:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: none;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.22);
+        box-shadow: none;
+      }
+
+      /* Sections */
       section {
-        padding: 60px 20px;
+        padding: clamp(3.25rem, 8vw, 5rem) 1.25rem;
+      }
+
+      section.alt {
+        background: var(--color-surface);
+      }
+
+      .section-head {
         text-align: center;
+        max-width: 38rem;
+        margin: 0 auto 2.5rem;
       }
 
       h2 {
-        margin-bottom: 30px;
-        font-size: 28px;
+        margin: 0 0 0.65rem;
+        font-size: clamp(1.45rem, 3vw, 1.85rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--color-text);
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 1.02rem;
+      }
+
+      .intro-text {
+        text-align: center;
+        color: var(--color-muted);
+        max-width: 40rem;
+        margin: 0 auto;
+        font-size: 1.05rem;
       }
 
       .grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        justify-items: stretch;
+      }
+
+      .grid-tight {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
       .card {
-        background: white;
-        padding: 25px;
-        width: 280px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: 0.3s;
+        background: var(--color-surface);
+        padding: 1.75rem 1.5rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        text-align: left;
+      }
+
+      section.alt .card {
+        box-shadow: var(--shadow-sm);
+        border-color: rgba(15, 23, 42, 0.08);
       }
 
       .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
       }
 
-      img,
+      .card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--color-brand);
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 0.98rem;
+      }
+
+      .card-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(12, 74, 110, 0.12), rgba(5, 150, 105, 0.12));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .why .card {
+        text-align: center;
+        font-weight: 600;
+        color: var(--color-text);
+        padding: 1.5rem 1.25rem;
+      }
+
+      .why .card p {
+        color: var(--color-text);
+        font-size: 1rem;
+      }
+
+      /* Gallery */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery figure {
+        margin: 0;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        aspect-ratio: 4 / 3;
+        background: #e2e8f0;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .gallery figure:hover img {
+        transform: scale(1.04);
+      }
+
+      /* Videos */
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+        gap: 1.5rem;
+      }
+
+      .video-wrap {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background: #0f172a;
+      }
+
       video {
         width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #0f172a;
       }
 
-      footer {
-        background: #0d47a1;
-        color: white;
-        padding: 20px;
+      /* CTA band */
+      .cta-band {
+        background: linear-gradient(135deg, var(--color-brand) 0%, #0f172a 100%);
+        color: #fff;
         text-align: center;
+        padding: clamp(2.5rem, 6vw, 3.5rem) 1.25rem;
+      }
+
+      .cta-band h2 {
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+
+      .cta-band p {
+        margin: 0 0 1.5rem;
+        opacity: 0.9;
+        max-width: 32rem;
+        margin-inline: auto;
+      }
+
+      .cta-band .btn {
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Footer */
+      footer {
+        background: #0f172a;
+        color: rgba(255, 255, 255, 0.85);
+        padding: 2rem 1.25rem;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      footer .footer-note {
+        margin-top: 0.5rem;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.55);
       }
 
       /* WhatsApp flotante */
       .whatsapp-float {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #25d366;
+        bottom: 1.35rem;
+        right: 1.35rem;
+        z-index: 50;
+        background: var(--color-whatsapp);
         color: white;
-        font-size: 22px;
-        padding: 15px 18px;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: 0.3s;
+        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .whatsapp-float:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
+        box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5);
       }
 
-      /* Responsive */
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 28px;
+      .whatsapp-float:focus-visible {
+        outline: 2px solid var(--color-brand-light);
+        outline-offset: 3px;
+      }
+
+      .whatsapp-float svg {
+        width: 1.65rem;
+        height: 1.65rem;
+        fill: currentColor;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
         }
 
+        .btn,
+        .card,
+        .gallery figure img,
+        .whatsapp-float {
+          transition: none;
+        }
+
+        .btn:hover,
+        .card:hover,
+        .whatsapp-float:hover {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 600px) {
         header {
-          padding: 70px 15px;
+          min-height: auto;
+        }
+
+        .hero-cta {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
   </head>
 
   <body>
-    <!-- BOTÓN FLOTANTE -->
     <a
-      href="https://wa.me/573104828769?text=Hola,%20quiero%20información"
+      href="https://wa.me/573104828769?text=Hola,%20quiero%20información%20de%20la%20ruta%20o%20expreso"
       class="whatsapp-float"
       target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escribir por WhatsApp"
     >
-      💬
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
     </a>
 
     <header>
-      <!-- 🔥 CAMBIO SEO IMPORTANTE -->
-      <h1>Transporte Escolar y Expresos en Bogotá, Soacha, Cundinamarca</h1>
-
-      <p>Seguridad, puntualidad y confianza para cada viaje</p>
-
-      <a
-        class="btn"
-        href="https://wa.me/573104828769?text=Hola,%20quiero%20información"
-      >
-        Cotizar por WhatsApp
-      </a>
+      <div class="hero-inner">
+        <span class="hero-badge">Seguridad · Puntualidad · Confianza</span>
+        <h1>Transporte Escolar y Expresos en Bogotá, Soacha, Cundinamarca</h1>
+        <p class="hero-lead">
+          Acompañamiento en cada trayecto para colegios, familias y grupos. Rutas escolares y
+          expresos dentro y fuera de la ciudad.
+        </p>
+        <div class="hero-cta">
+          <a
+            class="btn"
+            href="https://wa.me/573104828769?text=Hola,%20quiero%20información%20de%20la%20ruta%20o%20expreso"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
     </header>
 
-    <!-- 🔥 SEO LOCAL -->
-    <section>
-      <h2>Servicio en Bogotá, Soacha, Cundinamarca y alrededores</h2>
-      <p>
-        Ofrecemos transporte escolar y servicio de expresos en Bogotá, Soacha,
-        Cundinamarca y sus alrededores, garantizando seguridad, puntualidad y
-        comodidad en cada viaje.
-      </p>
-    </section>
-
-    <section>
-      <h2>Servicios</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Ruta Escolar</h3>
+    <section class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="cobertura">Cobertura en Bogotá, Soacha, Cundinamarca y alrededores</h2>
           <p>
-            Transporte seguro para estudiantes, con responsabilidad y
-            puntualidad diaria.
+            Rutas escolares y expresos con enfoque en seguridad y puntualidad para estudiantes,
+            instituciones y grupos.
           </p>
         </div>
+        <p class="intro-text">
+          Ofrecemos transporte escolar y servicio de expresos en Bogotá, Soacha, Cundinamarca y
+          zonas cercanas, con vehículos adecuados y atención personalizada para cada necesidad de
+          movilidad.
+        </p>
+      </div>
+    </section>
 
-        <div class="card">
-          <h3>Expresos</h3>
-          <p>
-            Viajes privados a cualquier destino dentro de Colombia, cómodos y
-            seguros.
-          </p>
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Servicios</h2>
+          <p>Soluciones claras para instituciones educativas y viajes privados.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🚌</div>
+            <h3>Ruta escolar</h3>
+            <p>
+              Transporte seguro para estudiantes, con responsabilidad y puntualidad en el día a día.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🛣️</div>
+            <h3>Expresos</h3>
+            <p>
+              Viajes privados a destinos dentro de Colombia, cómodos y con la confianza que su grupo
+              merece.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Nuestra flota</h2>
+          <p>Vehículos en condiciones adecuadas para su tranquilidad.</p>
+        </div>
+
+        <div class="gallery">
+          <figure><img src="assets/img/img1.jpeg" alt="Vehículo del servicio de transporte" loading="lazy" /></figure>
+          <figure><img src="assets/img/img2.jpeg" alt="Unidad disponible para rutas y expresos" loading="lazy" /></figure>
+          <figure><img src="assets/img/img3.jpeg" alt="Flota para transporte escolar" loading="lazy" /></figure>
+          <figure><img src="assets/img/img4.jpeg" alt="Vehículo del servicio" loading="lazy" /></figure>
+          <figure><img src="assets/img/img5.jpeg" alt="Transporte seguro para pasajeros" loading="lazy" /></figure>
+          <figure><img src="assets/img/img6.jpeg" alt="Unidad del servicio" loading="lazy" /></figure>
+          <figure><img src="assets/img/img7.jpeg" alt="Flota de transporte" loading="lazy" /></figure>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Nuestros Vehículos</h2>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Conozca nuestro servicio</h2>
+          <p>Videos que muestran cómo trabajamos.</p>
+        </div>
 
-      <div class="grid">
-        <img src="assets/img/img1.jpg" />
-        <img src="assets/img/img2.jpg" />
+        <div class="video-grid">
+          <div class="video-wrap">
+            <video controls playsinline preload="metadata">
+              <source src="assets/video/vid1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-wrap">
+            <video controls playsinline preload="metadata">
+              <source src="assets/video/vid2.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Conoce Nuestro Servicio</h2>
+    <section class="alt why">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>¿Por qué elegirnos?</h2>
+          <p>Compromiso visible en cada servicio.</p>
+        </div>
 
-      <div class="grid">
-        <video controls>
-          <source src="assets/video/vid1.mp4" type="video/mp4" />
-        </video>
-        <video controls>
-          <source src="assets/video/vid2.mp4" type="video/mp4" />
-        </video>
+        <div class="grid grid-tight">
+          <div class="card">
+            <p>Seguridad y responsabilidad en el trayecto</p>
+          </div>
+          <div class="card">
+            <p>Puntualidad acordada con su institución o grupo</p>
+          </div>
+          <div class="card">
+            <p>Experiencia y trato cercano con las familias</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>¿Por qué elegirnos?</h2>
-
-      <div class="grid">
-        <div class="card">✔ Seguridad garantizada</div>
-        <div class="card">✔ Puntualidad en cada servicio</div>
-        <div class="card">✔ Experiencia y confianza</div>
+    <div class="cta-band">
+      <div class="wrap">
+        <h2>¿Listo para cotizar?</h2>
+        <p>Escribanos por WhatsApp y le respondemos con la información que necesita.</p>
+        <a
+          class="btn"
+          href="https://wa.me/573104828769?text=Hola,%20quiero%20información%20de%20la%20ruta%20o%20expreso"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Abrir WhatsApp
+        </a>
       </div>
-    </section>
+    </div>
 
-    <!-- 🔥 SEO EXTRA (invisible para usuario) -->
-    <section style="display: none">
-      transporte escolar en Bogotá, Soacha, Cundinamarca , rutas escolares
-      seguras, servicio de expresos en Bogotá, Soacha, Cundinamarca , transporte
-      privado en Colombia, viajes empresariales, transporte de pasajeros
+    <!-- SEO: frases clave visibles para buscadores y usuarios (evita texto oculto) -->
+    <section class="alt" style="padding-top: 2rem; padding-bottom: 2rem">
+      <div class="wrap">
+        <p class="intro-text" style="font-size: 0.9rem; color: var(--color-muted)">
+          Transporte escolar en Bogotá, Soacha y Cundinamarca · Rutas escolares seguras · Expresos y
+          transporte privado en Colombia · Viajes para grupos e instituciones
+        </p>
+      </div>
     </section>
 
     <footer>
       <p>© 2026 Transporte Escolar y Expresos</p>
+      <p class="footer-note">Servicio en Bogotá, Soacha, Cundinamarca y alrededores</p>
     </footer>
   </body>
 </html>
