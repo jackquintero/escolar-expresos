@@ -2,73 +2,204 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Servicio de Transporte</title>
+    <title>Transporte Escolar y Expresos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         background: #f4f4f4;
+      }
+
+      header {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("assets/img/img1.jpg") center/cover;
+        color: white;
+        padding: 100px 20px;
         text-align: center;
       }
-      header {
-        background: #0d47a1;
-        color: white;
-        padding: 40px 20px;
+
+      h1 {
+        margin: 0;
+        font-size: 40px;
       }
-      section {
-        padding: 40px 20px;
+
+      header p {
+        font-size: 18px;
+        margin-top: 10px;
       }
+
       .btn {
         background: #25d366;
         color: white;
-        padding: 15px 25px;
+        padding: 15px 30px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 8px;
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 25px;
         font-size: 18px;
+        transition: 0.3s;
       }
+
+      .btn:hover {
+        background: #1ebe5d;
+        transform: scale(1.05);
+      }
+
+      section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+
       .card {
         background: white;
-        margin: 20px auto;
+        padding: 25px;
+        width: 280px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      img,
+      video {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background: #0d47a1;
+        color: white;
         padding: 20px;
-        max-width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      /* WhatsApp flotante */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        font-size: 22px;
+        padding: 15px 18px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 28px;
+        }
+
+        header {
+          padding: 70px 15px;
+        }
       }
     </style>
   </head>
+
   <body>
+    <!-- BOTÓN FLOTANTE -->
+    <a
+      href="https://wa.me/573104828769?text=Hola,%20quiero%20información"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      💬
+    </a>
+
     <header>
-      <h1>Transporte Seguro y Confiable</h1>
-      <p>Rutas escolares y viajes privados</p>
+      <h1>Transporte Escolar y Expresos</h1>
+      <p>Seguridad, puntualidad y confianza para cada viaje</p>
+
       <a
         class="btn"
-        href="https://wa.me/573166780614?text=Hola,%20quiero%20información"
-        >Contactar por WhatsApp</a
+        href="https://wa.me/573104828769?text=Hola,%20quiero%20información"
       >
+        Cotizar por WhatsApp
+      </a>
     </header>
 
     <section>
       <h2>Servicios</h2>
 
-      <div class="card">
-        <h3>Ruta Escolar</h3>
-        <p>Transporte seguro para estudiantes, puntualidad y confianza.</p>
-      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Ruta Escolar</h3>
+          <p>
+            Transporte seguro para estudiantes, con responsabilidad y
+            puntualidad diaria.
+          </p>
+        </div>
 
-      <div class="card">
-        <h3>Expresos</h3>
-        <p>Viajes privados a cualquier destino dentro de Colombia.</p>
+        <div class="card">
+          <h3>Expresos</h3>
+          <p>
+            Viajes privados a cualquier destino dentro de Colombia, cómodos y
+            seguros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nuestros Vehículos</h2>
+
+      <div class="grid">
+        <img src="assets/img/img1.jpg" />
+        <img src="assets/img/img2.jpg" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Conoce Nuestro Servicio</h2>
+
+      <div class="grid">
+        <video controls>
+          <source src="assets/video/vid1.mp4" type="video/mp4" />
+        </video>
       </div>
     </section>
 
     <section>
       <h2>¿Por qué elegirnos?</h2>
-      <p>✔ Seguridad</p>
-      <p>✔ Puntualidad</p>
-      <p>✔ Experiencia</p>
+
+      <div class="grid">
+        <div class="card">✔ Seguridad garantizada</div>
+        <div class="card">✔ Puntualidad en cada servicio</div>
+        <div class="card">✔ Experiencia y confianza</div>
+      </div>
     </section>
+
+    <footer>
+      <p>© 2026 Transporte Escolar y Expresos</p>
+    </footer>
   </body>
 </html>
